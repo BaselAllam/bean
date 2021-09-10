@@ -1,3 +1,4 @@
+import 'package:bean/models/controller/shared.dart';
 import 'package:bean/screens/bottomnavbar/bottomnavbar.dart';
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/theme/sharedcolors.dart';
@@ -99,6 +100,7 @@ The benefits include increasing your control over your business/platform, while 
                 ScaffoldMessenger.of(context)
                     .showSnackBar(snack(Colors.red, 'Kindly Accept Terms & Conditions'));
               } else {
+                Shared.saveToLocal('email', emailController.text);
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (_) {
                   return BottomNavBar();
