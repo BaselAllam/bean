@@ -1,10 +1,6 @@
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/theme/sharedcolors.dart';
-import 'package:bean/widgets/cheifwidget.dart';
-import 'package:bean/widgets/mealwidget.dart';
 import 'package:flutter/material.dart';
-
-import '../../demodata.dart';
 
 class WishList extends StatefulWidget {
   @override
@@ -20,21 +16,17 @@ class _WishListState extends State<WishList> {
         title: Text('WishList', style: appBarButtonTextStyle),
       ),
       body: Container(
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Text(
-              '  \n    WislListed Chief...',
-              style: mainTextStyle,
-            ),
-            for (int i = 0; i < 5; i++) CheifWidget(),
-            Text(
-              '   WislListed Meals...',
-              style: mainTextStyle,
-            ),
-            for (String i in mealImages) MealWidget(i)
-          ],
-        ),
+        // child: ListView.builder(
+        //   scrollDirection: Axis.vertical,
+        //   itemCount: favChief.length,
+        //   itemBuilder: (context, index) {
+        //     if(favChief.isEmpty) {
+        //       return Center(child: Text('No Wishlisted Chief', style: mainTextStyle,));
+        //     }else{
+        //       return CheifWidget();
+        //     }
+        //   },
+        // ),
       ),
     );
   }

@@ -1,10 +1,13 @@
 import 'package:bean/screens/searchresult.dart';
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/theme/sharedcolors.dart';
+import 'package:bean/widgets/categoryWidget.dart';
 import 'package:bean/widgets/cheifwidget.dart';
 import 'package:bean/widgets/mealwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:bean/demodata.dart';
+
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,12 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Map<String, dynamic>> data = [
-    {'icon': Icons.settings, 'txt': 'Settings'},
-    {'icon': Icons.phone, 'txt': 'Contact Us'},
-    {'icon': Icons.info, 'txt': 'About Us'},
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,15 +55,24 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Text(
+            '   Categories...',
+            style: mainTextStyle,
+          ),
+          Container(
+            height: 110.0,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return CategoryWidget();
+              },
+            ),
+          ),
+          Text(
             '  \n    Nearby Chief...',
             style: mainTextStyle,
           ),
           for (int i = 0; i < 5; i++) CheifWidget(),
-          Text(
-            '   Recently Orders...',
-            style: mainTextStyle,
-          ),
-          for (String i in mealImages) MealWidget(i)
         ],
       ),
     );

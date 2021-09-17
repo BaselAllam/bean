@@ -36,20 +36,3 @@
 // 		- forgot password
 // 		- logout
 // 		- update data
-
-
-
-// -----------------------------
-
-// Screens:
-
-// 	1- Splash screen
-// 	2- Home ( Cateogries, Deals )
-// 	3- Result
-// 	4- Chief profile
-// 	5- User profile
-// 	6- Settings
-// 	7- meal details
-// 	8- wishlist
-// 	9- login
-// 	10- signup

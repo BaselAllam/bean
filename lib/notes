@@ -1,0 +1,34 @@
+// Model => class that controller inherit from to can share data and notify all listeners on changes
+// ScopedModelDecendent => clas that being a parent of any widget wants to listen to data
+// ScopedModel => class that being on the top of app tree
+
+
+
+// Client Side
+
+  // UI & UX
+  // Front-end
+
+
+
+
+// Server Side
+
+  // Database
+      // SQL
+          // MySQL
+          // OracleSQL
+          // MsSQL
+          // PostgreSQL
+      
+      // NoSQL ( Dcoumented Database )
+          // MongoDB
+          // Firebase
+
+
+  // Back-end
+      // Python => Django, Flask, Pyramid, Bottle
+      // C# => .Net, ASPCore
+      // PHP => Laravel
+      // JS => NodeJs
+      // Ruby => Ruby On Rails

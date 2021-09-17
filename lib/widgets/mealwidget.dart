@@ -1,6 +1,5 @@
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/theme/sharedcolors.dart';
-import 'package:bean/widgets/fav.dart';
 import 'package:flutter/material.dart';
 
 class MealWidget extends StatefulWidget {
@@ -27,11 +26,8 @@ class _MealWidgetState extends State<MealWidget> {
               image: DecorationImage(
                   image: NetworkImage(widget.image), fit: BoxFit.fill),
             ),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topLeft, child: Fav()),
-                  Container(
+            alignment: Alignment.centerRight,
+            child: Container(
                     width: MediaQuery.of(context).size.width / 4,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
@@ -49,7 +45,6 @@ class _MealWidgetState extends State<MealWidget> {
                       ],
                     ),
                   )
-                ]),
           ),
           Container(
             decoration: BoxDecoration(
