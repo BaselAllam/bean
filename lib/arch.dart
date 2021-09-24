@@ -11,7 +11,7 @@
 
 // Func:
 // 	1- Cateogry
-// 		- get category
+// 		- get category //
 
 // 	2- Meal
 // 		- get meals filter

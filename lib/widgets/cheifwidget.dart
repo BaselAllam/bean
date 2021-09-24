@@ -1,8 +1,14 @@
+import 'package:bean/models/chief/chiefmodel.dart';
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/widgets/fav.dart';
 import 'package:flutter/material.dart';
 
 class CheifWidget extends StatefulWidget {
+
+ChiefModel chief;
+
+CheifWidget(this.chief);
+
   @override
   _ChifWidgetState createState() => _ChifWidgetState();
 }
@@ -19,17 +25,17 @@ class _ChifWidgetState extends State<CheifWidget> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 image:
-                    DecorationImage(image: NetworkImage('https://avatars.githubusercontent.com/u/44323531?v=4'), fit: BoxFit.fill)),
+                    DecorationImage(image: NetworkImage('${widget.chief.chiefImg}'), fit: BoxFit.fill)),
           ),
           title: Text(
-            'Cheif Bassel',
+            'Cheif ${widget.chief.chiefName}',
             style: mainTextStyle,
           ),
           subtitle: Text(
             '(25) Review - 5.5 Star\n20 km Away',
             style: subTextStyle,
           ),
-          trailing: Fav(),
+          trailing: Fav(widget.chief),
         ));
   }
 }

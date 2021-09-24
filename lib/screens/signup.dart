@@ -101,10 +101,10 @@ The benefits include increasing your control over your business/platform, while 
                     .showSnackBar(snack(Colors.red, 'Kindly Accept Terms & Conditions'));
               } else {
                 Shared.saveToLocal('email', emailController.text);
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (_) {
-                  return BottomNavBar();
-                }));
+                // Navigator.pushReplacement(context,
+                //     MaterialPageRoute(builder: (_) {
+                //   return BottomNavBar();
+                // }));
               }
             })
           ],

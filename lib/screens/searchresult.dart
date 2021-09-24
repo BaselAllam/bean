@@ -31,7 +31,8 @@ class _SearchResultState extends State<SearchResult> {
           scrollDirection: Axis.vertical,
           itemCount: 10,
           itemBuilder: (context, index) {
-            return CheifWidget();
+            return SizedBox();
+            // return CheifWidget();
           },
         ),
       ),

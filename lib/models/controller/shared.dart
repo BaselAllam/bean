@@ -5,6 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Shared{
 
 
+  static String domain = 'https://bean-7b79e-default-rtdb.firebaseio.com';
+
   static void saveToLocal(String key, String value) async {
 
     SharedPreferences _sharedPreferences = await SharedPreferences.getInstance();

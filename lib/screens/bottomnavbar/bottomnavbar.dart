@@ -1,3 +1,4 @@
+import 'package:bean/models/mainModel.dart';
 import 'package:bean/screens/bottomnavbar/homepage.dart';
 import 'package:bean/screens/bottomnavbar/orders.dart';
 import 'package:bean/screens/bottomnavbar/more.dart';
@@ -6,15 +7,29 @@ import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/theme/sharedcolors.dart';
 import 'package:flutter/material.dart';
 
+
 class BottomNavBar extends StatefulWidget {
+
+final MainModel model;
+
+BottomNavBar(this.model);
+
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+
+@override
+void initState() {
+  widget.model.getChief();
+  widget.model.getCategoires(widget.model.allChief);
+  widget.model.getCurrentPosition();
+  super.initState();
+}
+
   int current = 0;
-  // ignore: non_constant_identifier_names
-  List<Widget> Screens = [HomePage(), WishList(), Orders(), More()];
+  List<Widget> screens = [HomePage(), WishList(), Orders(), More()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +56,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           });
         },
       ),
-      body: Screens[current],
+      body: screens[current],
     );
   }
 }

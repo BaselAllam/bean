@@ -1,4 +1,5 @@
 import 'package:bean/models/controller/shared.dart';
+import 'package:bean/models/mainModel.dart';
 import 'package:bean/screens/bottomnavbar/bottomnavbar.dart';
 import 'package:bean/theme/sharedFontStyle.dart';
 import 'package:bean/widgets/field.dart';
@@ -60,7 +61,7 @@ class _SignInState extends State<SignIn> {
               } else {
                 Shared.saveToLocal('email', emailController.text);
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) {
-                  return BottomNavBar();
+                  return BottomNavBar(MainModel());
                 }));
               }
             })

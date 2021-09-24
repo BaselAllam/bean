@@ -35,9 +35,13 @@ void initState() {
   Widget build(BuildContext context) {
     return ScopedModel(
       model: MainModel(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: user.isEmpty ? Login() : BottomNavBar()
+      child: ScopedModelDescendant(
+        builder: (context, child, MainModel model) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: user.isEmpty ? Login() : BottomNavBar(model)
+          );
+        },
       ),
     );
   }
@@ -49,3 +53,8 @@ void initState() {
     });
   }
 }
+
+
+// multi language => https://resocoder.com/2019/06/01/flutter-localization-the-easy-way-internationalization-with-json/
+
+// apk link => https://drive.google.com/file/d/1BUgnkWyHig8tPW4D6CrZsEpyEDmnq7zG/view?usp=sharing

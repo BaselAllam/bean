@@ -9,7 +9,7 @@
         android:label="Bean Shop"
         android:icon="@mipmap/launcher_icon">
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyBih28jxXB0Y_uYpafjyirAWNv175HV2GU"/>
+               android:value="AIzaSyBpJpTo7k8LvHg1b5uDXfiNIQSVD2aMNhk"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
